@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="piknik_7_mayisModelStoreContainer" CdmEntityContainer="piknik_7_mayisEntities">
+    <EntitySetMapping Name="davetlilers">
+      <EntityTypeMapping TypeName="piknik_7_mayisModel.davetliler">
+        <MappingFragment StoreEntitySet="davetliler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="education" ColumnName="education" />
+          <ScalarProperty Name="CV" ColumnName="CV" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="preparedBy" ColumnName="preparedBy" />
+          <ScalarProperty Name="link" ColumnName="link" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="drivers">
+      <EntityTypeMapping TypeName="piknik_7_mayisModel.driver">
+        <MappingFragment StoreEntitySet="drivers">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="experience" ColumnName="experience" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="preparedBy" ColumnName="preparedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="hatlars">
+      <EntityTypeMapping TypeName="piknik_7_mayisModel.hatlar">
+        <MappingFragment StoreEntitySet="hatlar">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="guzergah" ColumnName="guzergah" />
+          <ScalarProperty Name="capacity" ColumnName="capacity" />
+          <ScalarProperty Name="preparedBy" ColumnName="preparedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="malzemeListesis">
+      <EntityTypeMapping TypeName="piknik_7_mayisModel.malzemeListesi">
+        <MappingFragment StoreEntitySet="malzemeListesi">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="fiyat" ColumnName="fiyat" />
+          <ScalarProperty Name="adet" ColumnName="adet" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="agirlik" ColumnName="agirlik" />
+          <ScalarProperty Name="preparedBy" ColumnName="preparedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="marketlers">
+      <EntityTypeMapping TypeName="piknik_7_mayisModel.marketler">
+        <MappingFragment StoreEntitySet="marketler">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="preparedBy" ColumnName="preparedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="organizasyonListesis">
+      <EntityTypeMapping TypeName="piknik_7_mayisModel.organizasyonListesi">
+        <MappingFragment StoreEntitySet="organizasyonListesi">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="lname" ColumnName="lname" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="job" ColumnName="job" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="preparedBy" ColumnName="preparedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="piknik_yerleri">
+      <EntityTypeMapping TypeName="piknik_7_mayisModel.piknik_yerleri">
+        <MappingFragment StoreEntitySet="piknik_yerleri">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="location" ColumnName="location" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="tel" ColumnName="tel" />
+          <ScalarProperty Name="imkanlar" ColumnName="imkanlar" />
+          <ScalarProperty Name="picture" ColumnName="picture" />
+          <ScalarProperty Name="preparedBy" ColumnName="preparedBy" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

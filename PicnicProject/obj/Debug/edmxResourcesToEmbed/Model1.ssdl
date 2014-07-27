@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="piknik_7_mayisModel.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="piknik_7_mayisModelStoreContainer">
+    <EntitySet Name="davetliler" EntityType="piknik_7_mayisModel.Store.davetliler" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="drivers" EntityType="piknik_7_mayisModel.Store.drivers" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="hatlar" EntityType="piknik_7_mayisModel.Store.hatlar" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="malzemeListesi" EntityType="piknik_7_mayisModel.Store.malzemeListesi" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="marketler" EntityType="piknik_7_mayisModel.Store.marketler" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="organizasyonListesi" EntityType="piknik_7_mayisModel.Store.organizasyonListesi" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="piknik_yerleri" EntityType="piknik_7_mayisModel.Store.piknik_yerleri" store:Type="Tables" Schema="dbo" />
+  </EntityContainer>
+  <EntityType Name="davetliler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nchar" MaxLength="15" />
+    <Property Name="lname" Type="nchar" MaxLength="15" />
+    <Property Name="location" Type="geography" />
+    <Property Name="tel" Type="nchar" MaxLength="15" />
+    <Property Name="education" Type="nchar" MaxLength="50" />
+    <Property Name="CV" Type="nchar" MaxLength="500" />
+    <Property Name="picture" Type="varbinary(max)" />
+    <Property Name="preparedBy" Type="nchar" MaxLength="10" />
+    <Property Name="link" Type="nchar" MaxLength="20" />
+  </EntityType>
+  <EntityType Name="drivers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="lname" Type="nvarchar(max)" />
+    <Property Name="tel" Type="nvarchar(max)" />
+    <Property Name="experience" Type="nvarchar(max)" />
+    <Property Name="picture" Type="varbinary(max)" />
+    <Property Name="preparedBy" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="hatlar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="guzergah" Type="geometry" />
+    <Property Name="capacity" Type="nvarchar(max)" />
+    <Property Name="preparedBy" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="malzemeListesi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="fiyat" Type="nvarchar(max)" />
+    <Property Name="adet" Type="nvarchar(max)" />
+    <Property Name="picture" Type="nvarchar(max)" />
+    <Property Name="agirlik" Type="nvarchar(max)" />
+    <Property Name="preparedBy" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="marketler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="tel" Type="nvarchar(max)" />
+    <Property Name="address" Type="nvarchar(max)" />
+    <Property Name="location" Type="geography" />
+    <Property Name="picture" Type="varbinary(max)" />
+    <Property Name="preparedBy" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="organizasyonListesi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="lname" Type="nvarchar(max)" />
+    <Property Name="tel" Type="nvarchar(max)" />
+    <Property Name="address" Type="nvarchar(max)" />
+    <Property Name="location" Type="geography" />
+    <Property Name="job" Type="nvarchar(max)" />
+    <Property Name="picture" Type="varbinary(max)" />
+    <Property Name="preparedBy" Type="nchar" MaxLength="10" />
+  </EntityType>
+  <EntityType Name="piknik_yerleri">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="nvarchar(max)" />
+    <Property Name="location" Type="geography" />
+    <Property Name="address" Type="nvarchar(max)" />
+    <Property Name="tel" Type="nvarchar(max)" />
+    <Property Name="imkanlar" Type="nvarchar(max)" />
+    <Property Name="picture" Type="varbinary(max)" />
+    <Property Name="preparedBy" Type="nchar" MaxLength="10" />
+  </EntityType>
+</Schema>

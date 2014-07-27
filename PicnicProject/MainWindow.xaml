@@ -1,0 +1,41 @@
+﻿<Window x:Class="PicnicProject.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:m="clr-namespace:Microsoft.Maps.MapControl.WPF;assembly=Microsoft.Maps.MapControl.WPF"
+        Title="MainWindow" Height="600" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Name="ExpanderCol" Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+            <Expander Name="MyExpander" Grid.Column="0" HorizontalAlignment="Left" IsExpanded="True" ExpandDirection="Right">
+            <StackPanel Margin="10" >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <TextBox Grid.Column="0" Name="txtPlacePicturename" Height="30" Width="120"/>
+                    <Button Grid.Column="0" HorizontalAlignment="Right" Content="Photo" Name="btnPictureUpload" Width="40" Click="btnPictureUpload_Click"/>
+                </Grid>
+                    <TextBox Name="txtPolygonName" Height="30" Margin="0,10" Width="120" Text="Place name" GotMouseCapture="txtPolygonName_GotMouseCapture"/>
+                <Button Name="btnUploadPolygon" Height="30" Width="120" Padding="2" Content="Upload Polygon" Click="btnUploadPolygon_Click"/>
+            </StackPanel>
+            </Expander>
+            <m:Map Grid.Column="1" Center="40.14384,26.40469,0.0000" ZoomLevel="11.000" Name="MyMap" CredentialsProvider="As5GOiPYsK3uwqSa79oPuZY8h16cd7a177uqTVESEeUXOIZCmRGNy_pCc0HesTBc" MouseDoubleClick="MyMap_MouseDoubleClick">
+                <m:Map.Children>
+                <m:MapLayer Name="ShapeLayer"/>
+                <m:MapLayer Name="ImageLayer"/>
+                </m:Map.Children>
+            </m:Map>
+        <StackPanel Grid.Column="1" HorizontalAlignment="Right">
+            <Button  Name="btnGeneratePolygon" Height="30" Width="120" Opacity="0.7" Padding="2" Content="Generate Polygon" Click="btnGeneratePolygon_Click"/>
+            <Button  Name="btCleanPolygon" Height="30" Margin="0,10,0,0" Opacity="0.7" Width="120" Padding="2" Content="Clean Polygon" Click="btnCleanPolygon_Click"/>
+        </StackPanel>
+            
+
+    </Grid>
+</Window>

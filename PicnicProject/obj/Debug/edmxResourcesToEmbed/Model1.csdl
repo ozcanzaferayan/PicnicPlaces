@@ -1,0 +1,100 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="piknik_7_mayisModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="piknik_7_mayisEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="davetlilers" EntityType="piknik_7_mayisModel.davetliler" />
+    <EntitySet Name="drivers" EntityType="piknik_7_mayisModel.driver" />
+    <EntitySet Name="hatlars" EntityType="piknik_7_mayisModel.hatlar" />
+    <EntitySet Name="malzemeListesis" EntityType="piknik_7_mayisModel.malzemeListesi" />
+    <EntitySet Name="marketlers" EntityType="piknik_7_mayisModel.marketler" />
+    <EntitySet Name="organizasyonListesis" EntityType="piknik_7_mayisModel.organizasyonListesi" />
+    <EntitySet Name="piknik_yerleri" EntityType="piknik_7_mayisModel.piknik_yerleri" />
+  </EntityContainer>
+  <EntityType Name="davetliler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="15" Unicode="true" FixedLength="true" />
+    <Property Name="lname" Type="String" MaxLength="15" Unicode="true" FixedLength="true" />
+    <Property Name="location" Type="Geography" />
+    <Property Name="tel" Type="String" MaxLength="15" Unicode="true" FixedLength="true" />
+    <Property Name="education" Type="String" MaxLength="50" Unicode="true" FixedLength="true" />
+    <Property Name="CV" Type="String" MaxLength="500" Unicode="true" FixedLength="true" />
+    <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="preparedBy" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+    <Property Name="link" Type="String" MaxLength="20" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="driver">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="lname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="tel" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="experience" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="preparedBy" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="hatlar">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="guzergah" Type="Geometry" />
+    <Property Name="capacity" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="preparedBy" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="malzemeListesi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="fiyat" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="adet" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="picture" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="agirlik" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="preparedBy" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="marketler">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="tel" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="address" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="location" Type="Geography" />
+    <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="preparedBy" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="organizasyonListesi">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="lname" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="tel" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="address" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="location" Type="Geography" />
+    <Property Name="job" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="preparedBy" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+  </EntityType>
+  <EntityType Name="piknik_yerleri">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" p1:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="location" Type="Geography" />
+    <Property Name="address" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="tel" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="imkanlar" Type="String" MaxLength="Max" Unicode="true" FixedLength="false" />
+    <Property Name="picture" Type="Binary" MaxLength="Max" FixedLength="false" />
+    <Property Name="preparedBy" Type="String" MaxLength="10" Unicode="true" FixedLength="true" />
+  </EntityType>
+</Schema>
